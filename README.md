@@ -41,7 +41,7 @@ around detected bottles in any image or video feed.
 
 <div align="center">
 
-![Output](images/output.png) 
+![Output](./images/output.png)
 
 > ✅ Model detected `plastic_bottle` and `steel_bottle`
 > with **0.89 confidence**
