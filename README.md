@@ -2,18 +2,24 @@
 
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-FF6B6B?style=for-the-badge)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![Colab](https://img.shields.io/badge/Google_Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)
-![Roboflow](https://img.shields.io/badge/Roboflow-6706CE?style=for-the-badge)
+<img src="https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white">
+<img src="https://img.shields.io/badge/YOLOv8-Ultralytics-FF6B6B?style=for-the-badge">
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white">
+<img src="https://img.shields.io/badge/Google_Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white">
+<img src="https://img.shields.io/badge/Roboflow-6706CE?style=for-the-badge">
 
-**A custom YOLOv8 object detection model trained to detect
-and classify water bottles in real-time**
+<br><br>
 
-[Demo](#-demo) • [Dataset](#-dataset) •
-[Training](#-training) • [Results](#-results) •
-[Quick Start](#-quick-start)
+<b>A custom YOLOv8 object detection model trained to detect
+and classify water bottles in real-time</b>
+
+<br><br>
+
+<a href="#-demo">Demo</a> •
+<a href="#-dataset">Dataset</a> •
+<a href="#-training">Training</a> •
+<a href="#-results">Results</a> •
+<a href="#-quick-start">Quick Start</a>
 
 </div>
 
