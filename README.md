@@ -1,4 +1,4 @@
-# 🍶 Water Bottle Detection using YOLOv8
+# 🍶 Real-Time-Bottle-Detection using YOLOv8
 
 <div align="center">
 
@@ -41,7 +41,7 @@ around detected bottles in any image or video feed.
 
 <div align="center">
 
-![Output](./images/output.png)
+![Output](https://jonnadaraju.github.io/Real-Time-Bottle-Detection/images/output.png)
 
 > ✅ Model detected `plastic_bottle` and `steel_bottle`
 > with **0.89 confidence**
@@ -179,8 +179,8 @@ model.train(
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/JonnadaRaju/Water-Bottle-Detection.git
-cd Water-Bottle-Detection
+git clone https://github.com/JonnadaRaju/Real-Time-Bottle-Detection.git
+cd Real-Time-Bottle-Detection
 ```
 
 ### 2. Install Dependencies
