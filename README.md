@@ -41,10 +41,10 @@ around detected bottles in any image or video feed.
 
 <div align="center">
 
-![Output](https://jonnadaraju.github.io/Real-Time-Bottle-Detection/images/output.png)
+<img src="https://jonnadaraju.github.io/Real-Time-Bottle-Detection/images/output.png" width="700">
 
-> ✅ Model detected `plastic_bottle` and `steel_bottle`
-> with **0.89 confidence**
+✅ Model detected `plastic_bottle` and `steel_bottle`
+with **0.89 confidence**
 
 </div>
 
