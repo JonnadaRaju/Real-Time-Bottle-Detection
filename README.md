@@ -10,38 +10,34 @@
 
 <br>
 
-<b>A custom YOLOv8 object detection model trained to detect
-and classify water bottles in real-time</b>
+<b>A custom YOLOv8 object detection model trained to detect and classify water bottles in real-time</b>
 
 <br>
 
-<a href="#-demo">Demo</a> •
-<a href="#-dataset">Dataset</a> •
-<a href="#-training">Training</a> •
-<a href="#-results">Results</a> •
-<a href="#-quick-start">Quick Start</a>
+<a href="#demo">Demo</a> •
+<a href="#dataset">Dataset</a> •
+<a href="#training">Training</a> •
+<a href="#results">Results</a> •
+<a href="#quick-start">Quick Start</a>
 
 </div>
 
 ---
 
-## 📌 Overview
+# 📌 Overview
 
-This project builds a **custom YOLOv8 object detection model**
-trained to detect water bottles and classify them into
-two categories:
+This project builds a **custom YOLOv8 object detection model** trained to detect water bottles and classify them into two categories.
 
 | Class | Icon | Description |
-|-------|------|-------------|
-| `plastic_bottle` | 🧴 | Transparent or colored plastic water bottles |
-| `steel_bottle` | 🥤 | Metal or stainless steel water bottles |
+|------|------|-------------|
+| plastic_bottle | 🧴 | Transparent or colored plastic water bottles |
+| steel_bottle | 🥤 | Metal or stainless steel water bottles |
 
-The model draws **bounding boxes with confidence scores**
-around detected bottles in any image or video feed.
+The model draws **bounding boxes with confidence scores** around detected bottles in any image or video feed.
 
 ---
 
-## 📸 Demo
+# 📸 Demo
 
 ### After Detection
 
@@ -49,58 +45,51 @@ around detected bottles in any image or video feed.
 
 <img src="https://jonnadaraju.github.io/Real-Time-Bottle-Detection/images/output.png" width="700">
 
-<p><b>✅ Model detected plastic_bottle and steel_bottle with 0.89 confidence</b></p>
+<b>Model detected plastic_bottle and steel_bottle with 0.89 confidence</b>
 
 </div>
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 | Tool | Purpose |
-|------|---------|
-| **Python 3.8+** | Programming language |
-| **YOLOv8 (Ultralytics)** | Object detection model |
-| **Google Colab** | Cloud GPU training (Tesla T4) |
-| **Roboflow** | Dataset preparation and annotation |
-| **OpenCV** | Image processing |
-| **PyTorch** | Deep learning framework |
-| **Matplotlib** | Visualization and charts |
+|-----|---------|
+| Python 3.8+ | Programming language |
+| YOLOv8 (Ultralytics) | Object detection model |
+| Google Colab | Cloud GPU training |
+| Roboflow | Dataset preparation and annotation |
+| OpenCV | Image processing |
+| PyTorch | Deep learning framework |
+| Matplotlib | Visualization and charts |
 
 ---
 
-<!-- ## 📊 Dataset
-
-<div align="center">
-<img src="images/dataset/sample_annotated.jpg"
-     width="700"
-     alt="Sample Annotated Dataset"/>
-
-*Sample images with ground truth bounding box annotations*
-</div> -->
+# 📊 Dataset
 
 | Detail | Info |
-|--------|------|
-| **Source** | Roboflow Universe |
-| **Total Images** | 315 |
-| **Training Set** | 250 images (79%) |
-| **Validation Set** | 26 images (8%) |
-| **Test Set** | 39 images (13%) |
-| **Annotation Format** | Bounding Boxes (YOLOv8) |
-| **Input Size** | 512×512 (preprocessed) |
-| **Classes** | 2 (plastic_bottle, steel_bottle) |
+|------|------|
+| Source | Roboflow Universe |
+| Total Images | 315 |
+| Training Set | 250 images |
+| Validation Set | 26 images |
+| Test Set | 39 images |
+| Annotation Format | YOLOv8 Bounding Boxes |
+| Input Size | 512×512 |
+| Classes | plastic_bottle, steel_bottle |
 
-📎 Dataset:
-[View on Roboflow](dataset/dataset_link.txt)
+Dataset link:
+
+dataset/dataset_link.txt
 
 ---
 
-## 🏋️ Training
+# 🏋️ Training
 
-Training was performed on **Google Colab**
-using a **Tesla T4 GPU**.
+Training was performed on **Google Colab using a Tesla T4 GPU**.
 
-### Configuration
+### Training Configuration
+
 ```python
 from ultralytics import YOLO
 
@@ -113,87 +102,59 @@ model.train(
 )
 ```
 
-### Parameters
+### Training Parameters
 
 | Parameter | Value |
-|-----------|-------|
-| **Model** | YOLOv8 Nano (yolov8n) |
-| **Epochs** | 53 |
-| **Image Size** | 640×640 |
-| **GPU** | Tesla T4 (Google Colab) |
-| **Framework** | Ultralytics |
+|----------|------|
+| Model | YOLOv8 Nano |
+| Epochs | 53 |
+| Image Size | 640×640 |
+| GPU | Tesla T4 |
+| Framework | Ultralytics |
 
 ---
 
-## 📈 Results
+# 📈 Results
 
-### Performance Metrics
+## Performance Metrics
 
-<div align="center">
-
-| Metric | Best Score | Meaning |
-|--------|-----------|---------|
-| 🎯 **mAP@50** | **0.806** | 80.6% main accuracy |
-| 🎯 **mAP@50-95** | **0.618** | 61.8% strict accuracy |
-| ✅ **Precision** | **0.913** | 91.3% detections correct |
-| 🔍 **Recall** | **0.804** | 80.4% bottles found |
-| ⏱️ **Inference** | **43.8ms** | Near real-time speed |
-
-</div>
-
-### 📊 Training Charts
-
-<div align="center">
-<img src="images/overall.png"
-     width="900"
-     alt="Training Charts — mAP, Precision, Recall,
-          Box Loss, Class Loss"/>
-
-*Training metrics over 53 epochs*
-</div>
-
-### What the Charts Show
-
-| Chart | Result | Status |
-|-------|--------|--------|
-| mAP@50 | Jumped 0.25 → 0.80 in first 10 epochs | ✅ |
-| mAP@50-95 | Steadily improved 0.10 → 0.62 | ✅ |
-| Precision | Reached peak 0.913 | ✅ |
-| Recall | Stabilized at 0.80 | ✅ |
-| Box Loss | Consistently decreasing | ✅ |
-| Class Loss | Consistently decreasing | ✅ |
-
-> ✅ Both losses going **DOWN** confirms the model
-> learned successfully without overfitting
-
-
-### Inference Speed
-
-| Stage | Time |
-|-------|------|
-| Preprocess | 2.0 ms |
+| Metric | Score |
+|------|------|
+| mAP@50 | 0.806 |
+| mAP@50-95 | 0.618 |
+| Precision | 0.913 |
+| Recall | 0.804 |
 | Inference | 43.8 ms |
-| Postprocess | 1.6 ms |
-| **Total** | **~47 ms/image** |
-
-> ⚡ Capable of near **real-time detection**
 
 ---
 
-## 🚀 Quick Start
+# 📊 Training Charts
 
-### 1. Clone Repository
+<div align="center">
+
+<img src="https://jonnadaraju.github.io/Real-Time-Bottle-Detection/images/overall.png" width="900">
+
+</div>
+
+---
+
+# 🚀 Quick Start
+
+## 1. Clone Repository
+
 ```bash
 git clone https://github.com/JonnadaRaju/Real-Time-Bottle-Detection.git
 cd Real-Time-Bottle-Detection
 ```
 
-### 2. Install Dependencies
+## 2. Install Dependencies
+
 ```bash
 pip install ultralytics opencv-python matplotlib
 ```
 
-### 3. Run Detection on Image
+## 3. Run Detection on Image
+
 ```python
 from ultralytics import YOLO
 
@@ -208,13 +169,13 @@ results = model.predict(
 print(f"Detected: {len(results[0].boxes)} bottles")
 ```
 
-### 4. Run on Webcam
+## 4. Run Webcam Detection
+
 ```python
 from ultralytics import YOLO
 
 model = YOLO("models/best.pt")
 
-# 0 = default webcam
 model.predict(
     source=0,
     show=True,
@@ -222,7 +183,8 @@ model.predict(
 )
 ```
 
-### 5. Run on Video
+## 5. Run Video Detection
+
 ```python
 from ultralytics import YOLO
 
@@ -237,23 +199,28 @@ model.predict(
 
 ---
 
+# 🧠 Skills Demonstrated
 
-## 🧠 Skills Demonstrated
-
-`Computer Vision` `Object Detection` `YOLOv8`
-`Deep Learning` `Dataset Annotation` `Model Training`
-`Model Inference` `Python` `Google Colab` `Roboflow`
-`PyTorch` `OpenCV` `Transfer Learning`
+Computer Vision  
+Object Detection  
+YOLOv8  
+Deep Learning  
+Dataset Annotation  
+Model Training  
+Model Inference  
+Python  
+Google Colab  
+Roboflow  
+PyTorch  
+OpenCV  
+Transfer Learning  
 
 ---
 
 <div align="center">
 
-Made with ❤️ using YOLOv8 + Google Colab
+Made with ❤️ using YOLOv8 + Google Colab  
 
 ⭐ Star this repo if you found it helpful!
 
 </div>
-```
-
----
