@@ -8,12 +8,12 @@
 <img src="https://img.shields.io/badge/Google_Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white">
 <img src="https://img.shields.io/badge/Roboflow-6706CE?style=for-the-badge">
 
-<br><br>
+<br>
 
 <b>A custom YOLOv8 object detection model trained to detect
 and classify water bottles in real-time</b>
 
-<br><br>
+<br>
 
 <a href="#-demo">Demo</a> •
 <a href="#-dataset">Dataset</a> •
